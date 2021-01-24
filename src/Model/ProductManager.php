@@ -39,7 +39,7 @@ class ProductManager
     public function deleteProducts($id)
     {
         $sql = "DELETE FROM `Products` WHERE id = '$id'";
-        $this->dbConnect->execute($id);
+        $this->dbConnect->execute($sql);
     }
 
     public function updateProducts($id,$product)

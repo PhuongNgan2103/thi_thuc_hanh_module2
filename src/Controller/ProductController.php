@@ -39,7 +39,7 @@ class ProductController
 
     public function deleteProducts()
     {
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['Id'];
         $this->productManager->deleteProducts($id);
         header('location: index.php');
     }
@@ -57,7 +57,7 @@ class ProductController
             $this->productManager->updateProducts($id,$product);
             header('location: index.php');
         }
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['Id'];
         $product = $this->productManager->getProducts($id);
         include_once 'src/View/edit-listProduct.php';
     }

@@ -31,6 +31,15 @@
             <label for="inputId" class="col-sm-1 col-form-label">Category:</label>
             <div class="col-sm-5">
                 <input type="text" class="form-control" id="inputCategoryId" required name="categoryId">
+                <select class="form-select" aria-label="Default select example" name="categoryId">
+                    <?php
+                    if (isset($data)){
+                        foreach ($data as $category): ?>
+                            <option value="3" <?php echo $category->getId() ?>></option>
+                            <option value="3" <?php echo $category->getNama() ?>></option>
+                        <?php endforeach;
+                    } ?>
+                </select>
             </div>
         </div>
         <div class="mb-3 row">
@@ -50,4 +59,3 @@
 </form>
 </body>
 </html>
-
